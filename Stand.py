@@ -18,23 +18,23 @@ class Stand(ABC):
         self.name = name
 
     def get_row(self):
-        """This method will return the row number.""""
+        """This method will return the row number."""
         return self.row
 
-    def set_row(self, row)
+    def set_row(self, row):
         """This method will let you change the row number"""
         self.row = row
 
     def get_column(self):
-        """This method will return the column number.""""
+        """This method will return the column number."""
         return self.column
  
-    def set_column(self, column)
+    def set_column(self, column):
         """This method will let you change the column number"""
         self.row = column
 
     def get_num_pods(self):
-        """This method will return the number of pods in this specific stand.""""
+        """This method will return the number of pods in this specific stand."""
         return self.num_pods
 
     def set_num_pods(self, num_pods):
@@ -68,7 +68,4 @@ class Stand(ABC):
 
 
 if __name__ == "__main__":
-    
-    eric = GrandStand('Eric Javier')
-
-    eric.show_name()
+    pass
