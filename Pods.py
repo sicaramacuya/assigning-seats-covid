@@ -1,14 +1,16 @@
 import numpy
 import math
+import helper_module
 
 class Pod():
     """This class will create seats for people to sit down. Those seats are going to be called 'Pods'."""
- 
+
     def __init__(self, row, column):
         """This constructur will create and store the attribute for a pod."""
-        
+
         self.pod = self.create_pod(row, column)
-    
+        self.id = helper_module.generate_id()
+
     def show_pod(self):
         """This will display the pod."""
 
@@ -86,7 +88,13 @@ class Pod():
         self.pod = pod       
         # return pod
     
+    def get_id(self):
+        """This method will return the id number."""
+        return self.id
+
     def __sitting_logistic(self, amount_people_sitting, pod, actual_rows_people_sit, seats_left, social_distance_buffer_seats): # CREO QUE NO SE NECSITARA avaliable_seats, occupied_seats, buffer_seats
+        """This function is the one that is going to decide where to sit everyone."""
+
         for row in actual_rows_people_sit: # This goes through all rows people can sit.
 
             avaliable_seats_row = self.__get_avaliable_seats_row(pod[row])
@@ -269,14 +277,7 @@ if __name__ == '__main__':
     
     grand_stand_pod_left = Pod(17,14)
 
-    people_to_be_seatted = [5, 10, 3, 7, 5, 3, 4]
-
-    for i in people_to_be_seatted:
-        grand_stand_pod_left.sitting_people(i, grand_stand_pod_left.pod)
-
-        if i == 4:
-            grand_stand_pod_left.show_pod()
-
+    print(grand_stand_pod_left.get_id())
 
 
 
