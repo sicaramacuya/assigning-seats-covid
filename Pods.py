@@ -12,7 +12,7 @@ class Pod():
         self.id = helper_module.generate_id()
 
     def show_pod(self):
-        """This will display the pod."""
+        """This will display this pod."""
 
         print(self.pod)
 
@@ -277,7 +277,8 @@ if __name__ == '__main__':
     
     grand_stand_pod_left = Pod(17,14)
 
-    print(grand_stand_pod_left.get_id())
+    grand_stand_pod_left.show_pod()
 
+    print(type(grand_stand_pod_left))
 
 
