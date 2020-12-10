@@ -9,8 +9,8 @@ class Stand(ABC):
         self.row = row # All the rows that it has with counting different pods
         self.column = column # All the columns
         self.num_pods = num_pods # Quantity of pods wanted for the stand.
-        self.pod_rows = int(self.row / self.num_pods)
-        self.pod_columns = column
+        self.pod_rows = row
+        self.pod_columns = int(self.column / self.num_pods) 
         self.pods = list() # A list of all pods inside the stand
 
     def create_pod(self):
