@@ -2,7 +2,13 @@ from Stand import Stand
 from Pods import Pod
 
 class GrandStand(Stand):
-    pass
+
+    def __init__(self, name, row, column, num_pods):
+
+        super().__init__(name, row, column, num_pods)
+        self.stand_category = 'Grand Stand'
+
+
 
 if __name__ == "__main__":
     
