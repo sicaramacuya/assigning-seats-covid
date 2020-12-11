@@ -184,17 +184,6 @@ class Pod():
 
                         return pod
 
-    
-
-
-
-
-
-
-
-
-
-
     def sitting_people_from_terminal(self, amount_people_sitting, terminal):
         """This function will deside where to sit people on the pod. The amount of people is an integer and the pod needs to be an object type matrix. After seatting everyone it will set some buffer seats for social distance."""
 
@@ -224,7 +213,6 @@ class Pod():
             
         else:
             self.pod = response   
-
 
     def sitting_logistic_from_terminal(self, amount_people_sitting, pod, actual_rows_people_sit, seats_left, social_distance_buffer_seats, terminal): 
         """This function is the one that is going to decide where to sit everyone."""
@@ -304,7 +292,7 @@ class Pod():
                 # This will run if the people that want to be seatted is larger that actual row length.
                 elif amount_people_sitting > len(pod[0]):
                     #print(f'The amount of people to be seatted is larger than the actual row.')
-                    return pod
+                    return pod # PUEDES DEVOLVER QUE BRINQUE A LA PROXIMA SECCION  terminal.jump_to_next_pod = True
                 
                 # This will run when less than the actual amount for the social distance buffer seats are needed. 
                 else: 
@@ -323,18 +311,6 @@ class Pod():
                         self.set_buffer_seat(buffer_seats_needed, occupied_seats, buffer_seats, pod, row)
 
                         return pod
-
-
-
-
-
-
-
-
-
-
-
-
 
     def get_id(self):
         """This method will return the id number."""
@@ -515,8 +491,7 @@ class Pod():
 
 
 if __name__ == '__main__':
-    pass
-    
+    pass    
     # test = numpy.zeros(shape=(10, 10), dtype=int)
 
     # print(test)

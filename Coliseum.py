@@ -49,6 +49,8 @@ class Coliseum():
         if not found_stand:
             print(f'Stand not found!')
 
+
+
 if __name__ == "__main__":
 
     # Create a Coliseum that will have three Stands and each
@@ -90,5 +92,3 @@ if __name__ == "__main__":
 
     # Cheking of what the stadium is made of
     coliseum_humacao.show_stands()
-    
-    

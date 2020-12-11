@@ -4,7 +4,6 @@ from GrandStand import GrandStand
 from BoxStand import BoxStand
 from TelescopicStand import TelescopicStand
 from Pods import Pod
-from random import randint
 from helper_module import print_newline
 
 class Terminal():
@@ -84,13 +83,12 @@ class Terminal():
             print(f'\t\tCategory: {stand.stand_category}')
             print(f'\t\t\tName: {stand.name}')
             for pod in stand.pods:
-                print(f'\t\t\t\tPod Id: {pod.id}')
+                print(f'\t\t\t\tPod Id: {pod.get_id()}')
                 print("\t\t\t\t\t" + str(pod.pod).replace('\n','\n\t\t\t\t\t'))
 
     def seatting_people(self, coliseum, amount_people_sitting):
         """This method will sit people inside the coliseum."""
 
-        # This don't work because I'm seating the same amount of people in each pod!!!!!!!!
         for stand in coliseum.stands:
             for pod in stand.pods:
 
@@ -102,8 +100,9 @@ class Terminal():
                 # In the case the pod was full this value was going to be changed inside sitting_people_from_terminal() and allow the program to move to the next pod.
                 if self.jump_to_next_pod == True:
                     pass
+                
                 else:
-                    if amount_people_sitting > 1 and amount_people_sitting <= pod.pod[0                                  ]:
+                    if amount_people_sitting > 1:
                         print(f'The group of {amount_people_sitting} is seated.')
 
                     elif amount_people_sitting == 1:
@@ -197,6 +196,8 @@ class Terminal():
 
         return coliseum
 
+
+
 if __name__ == "__main__":
     
     # Creating a terminal.
@@ -233,31 +234,3 @@ if __name__ == "__main__":
 
         # More space, more readable.
         print('\n\n\n')
-
-
-    # terminal_001 = Terminal('Terminal 001')
-
-    # humacao_arena = terminal_001.built_coliseum()
-
-    # print('\n\n\n\n')
-    # terminal_001.show_coliseum_report(humacao_arena)
-    # print('\n\n\n\n')
-
-    # groups_people = list()
-
-    # # Generating numbers that represent people to be seated and appending it to a list.
-    # for _ in range(25):
-    #     groups_people.append(randint(0,14))
-
-    # # Sitting the people from the list.
-    # for group in groups_people:
-    #     terminal_001.seatting_people(humacao_arena, group) 
-
-
-
-    # terminal_001.show_coliseum_report(humacao_arena)
-    # print('\n\n\n\n')
-    # terminal_001.show_coliseum_layout(humacao_arena)
-    # print('\n\n\n\n')
-
-

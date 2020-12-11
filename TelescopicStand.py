@@ -7,5 +7,7 @@ class TelescopicStand(Stand):
         super().__init__(name, row, column, num_pods)
         self.stand_category = 'Telescopic Stand'
 
+
+
 if __name__ == "__main__":
     pass

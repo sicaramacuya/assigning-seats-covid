@@ -28,5 +28,3 @@ if __name__ == "__main__":
 
     for i in lateral_grand_stand_west.get_pods():
         print(i.pod)
-
-
