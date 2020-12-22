@@ -54,7 +54,7 @@ From this measurements we can conclude that the buffers rows that are going to b
 ### Coliseum
 Using this coliseum I model the program and found problems and solutions. As I said before, there are some problems I have to find solutions but as of right now the program can create a coliseum, stands and sit people but the stands have to have a rectangular shape.
 
-<img width="749" alt="Coliseum - Seats Configuration" src="https://user-images.githubusercontent.com/69913812/102846643-6df2fc00-4408-11eb-8e30-41539164fd14.png">
+<img width="757" alt="Coliseum - Seats Configuration" src="https://user-images.githubusercontent.com/69913812/102847466-50269680-440a-11eb-8712-f9e1aac165b9.png">
 
 ### Stands
 After creating stands and pods like "Pod #1", in the image below. The program will set some rows as Buffer Rows as seen in "Pod #2". After all this depending on the amount of people that want to be seated together, as a group. The program will seat them and seat the next group with 6 feets apart as seen in "Pod #1".
